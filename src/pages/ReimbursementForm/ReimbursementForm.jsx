@@ -14,30 +14,12 @@ const projects = [
   { name: 'XX桥梁维修项目', code: 'PJT002' },
 ];
 const feeTypes = ['材料采购费', '机械租赁费', '差旅费', '人工费', '办公费'];
-function numToCny(num) {
-  if (!num) return '';
-  return '壹' + num + '元';
-
-
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { Form, Input, Button, Select, DatePicker, InputNumber, Upload, message, Space } from 'antd';
-import { PlusOutlined, MinusCircleOutlined, UploadOutlined } from '@ant-design/icons';
-import moment from 'moment';
-
-const { Option } = Select;
-
-const departments = ['工程部', '采购部', '财务部'];
-const projects = [
-  { name: 'XX小区建设项目', code: 'PJT001' },
-  { name: 'XX桥梁维修项目', code: 'PJT002' },
-];
-const feeTypes = ['材料采购费', '机械租赁费', '差旅费', '人工费', '办公费'];
 
 function numToCny(num) {
   if (!num) return '';
   return '壹' + num + '元';
 }
+
 export default function ReimbursementForm() {
   const [form] = Form.useForm();
   const [projectCode, setProjectCode] = useState('');
