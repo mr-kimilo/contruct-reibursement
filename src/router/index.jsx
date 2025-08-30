@@ -1,15 +1,12 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Login from '../pages/Login';
-import ReimbursementForm from '../pages/ReimbursementForm';
-import MyReimbursements from '../pages/MyReimbursements';
-import ApprovalDetail from '../pages/ApprovalDetail';
 
-
-
-
+import Login from '../pages/Login/Login.jsx';
+import ReimbursementForm from '../pages/ReimbursementForm/ReimbursementForm.jsx';
+import MyReimbursement from '../pages/MyReimbursement/MyReimbursement.jsx';
+import ApprovalDetail from '../pages/ApprovalDetail/ApprovalDetail.jsx';
+import ArchiveQuery from '../pages/ArchiveQuery/ArchiveQuery.jsx';
 import MainLayout from '../components/Layout/MainLayout';
-import ArchiveQuery from '../pages/ArchiveQuery/ArchiveQuery';
 
 export default function AppRouter() {
   return (
@@ -17,7 +14,7 @@ export default function AppRouter() {
       <Route path="/login" element={<Login />} />
       <Route element={<MainLayout />}>
         <Route path="/form" element={<ReimbursementForm />} />
-        <Route path="/my" element={<MyReimbursements />} />
+      <Route path="/my" element={<MyReimbursement />} />
         <Route path="/approval" element={<ApprovalDetail />} />
         <Route path="/archive" element={<ArchiveQuery />} />
       </Route>
